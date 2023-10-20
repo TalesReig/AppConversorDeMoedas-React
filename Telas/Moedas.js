@@ -2,7 +2,7 @@ import { FlatList } from "react-native";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
 export default function Moedas({navigation}) {
-   const listaContatos = [
+   const listaMoedas = [
       {id: 0, titulo: 'Real Brasileiro -> Dólar Americano', codigo: 'BRL-USD'},
       {id: 1, titulo: 'Real Brasileiro -> Dólar Canadense', codigo: 'BRL-CAD'},
       {id: 2, titulo: 'Real Brasileiro -> Euro', codigo: 'BRL-EUR'},
@@ -24,7 +24,7 @@ export default function Moedas({navigation}) {
    return (
       <View style={{ flex: 1 }}>
          <FlatList 
-            data= { listaContatos }
+            data= { listaMoedas }
             renderItem={ ({item}) =>
             <TouchableOpacity onPress={() => navigation.navigate('Conversao', {titulo: item.titulo, codigo: item.codigo })}>
                <View style={{ flexDirection: 'row', borderBottomWidth: 1, width: '100%', alignItems: 'center', padding: 10 }}>
